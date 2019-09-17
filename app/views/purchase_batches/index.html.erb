@@ -10,7 +10,7 @@
         <tr>
           <td><%= purchase_batch.id %> </td>
           <td> <%= purchase_batch.purchases.size %></td>
-          <td> <%= number_to_currency(purchase_batch.total_value, unity: "R$") %></td>
+          <td> <%= number_to_currency(purchase_batch.total_value, unity:"R$") %></td>
         </tr>
       <% end %>
   </table>
