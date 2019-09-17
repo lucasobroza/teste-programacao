@@ -1,10 +1,11 @@
 class PurchaseBatchesController < ApplicationController
+
   def new
     @purchase_batch = PurchaseBatch.new
   end
 
   def index
-    @purchase_batches = PurchaseBatch.all
+    @purchase_batches = PurchaseBatch.all.includes(:purchases, purchases:[:item]).page(params[:page])
   end
 
   def create

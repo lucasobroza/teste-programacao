@@ -1,6 +1,7 @@
 class PurchaseBatch < ApplicationRecord
   has_many :purchases
   attr_accessor :batch_file
+  paginates_per 10
 
   def parse_batch_file
     self.purchases = Purchase.create_from_file(parametrize_file)

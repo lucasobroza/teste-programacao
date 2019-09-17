@@ -4,7 +4,7 @@
 <div class="container">
   <%= form_for @purchase_batch do |f| %>
     <div class="form-group">
-      <%= f.file_field :batch_file %>
+      <%= f.file_field :batch_file, {required: true }%>
       <%= f.submit("Enviar", {class: "btn btn-primary"})%>
     </div>
 
