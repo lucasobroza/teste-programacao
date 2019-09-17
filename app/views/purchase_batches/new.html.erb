@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Importar dados de venda</h2>
+</div>
+<div class="container">
+  <%= form_for @purchase_batch do |f| %>
+    <div class="form-group">
+      <%= f.file_field :batch_file %>
+      <%= f.submit("Enviar", {class: "btn btn-primary"})%>
+    </div>
+
+  <% end %>
+</div>
